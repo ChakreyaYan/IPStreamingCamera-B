@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <style>
+           body{
+               background-color: #DD0303;
+               margin: 10px 10px 10px 10px;
+           }
+
+           ul.menu {
+            width: 20%;
+            background-color: white;
+            position: absolute;
+            height: 100%;
+            right:10px;
+
+            }
+
+            ul.Notification {
+              width: 20%;
+              background-color: white;
+              position: absolute;
+              height: 100%;
+              left:10px;
+            }
+            div.second{
+                  margin: auto;
+                 width: 45%;
+
+                 background-color: blue;
+                 height: 100%;
+
+
+            }
+        p a  {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+            margin:8px 35px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            width: 150px;
+            align-items: center;
+            display: block ;
+        }
+        p a:hover:not(.active) {
+            background-color: blue;
+            color: white;
+        }
+        .fix{
+            background-color: #DCDCDC;
+            color: black ;
+            padding : 3px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .login{
+           float : end;
+        }
+
+
+       </style>
+    </head>
+    <body>
+        <a href="{% url 'insertCamera' %}"></p><center><h1 style="color:white;">Kirirom Institute of Technology</h1></center>
+        <center><h3 style="color:white;">Project: IP Streaming Camera on Virtual Reality</h3></center></a>
+        <p>2.   <a href="{% url  'insertCamera' %}">Add Camera here</a></p>
+
+
+        <div>
+            <ul class="menu">
+              <p class="fix">Location</p>
+                <p><a href="{% url 'insertCamera' %}">AddCamera</a></p>
+                <h3> How to add New Camera</h3>
+                <ol>
+                    <li>Click on add camera button</li>
+                      <li>choose one of IP down below</li>
+                        <li>Put any Camera name</li>
+                          <li>username of camera is <em>admin</em></li>
+                            <li>camera's password is is <em>admin</em> but some ip have different password</li>
+
+                </ol>
+                <p>found 30 ip camera candidates
+http://10.0.17.2:80
+http://10.0.17.3:80
+http://10.0.17.5:80
+http://10.0.17.14:80
+http://10.0.17.15:80
+http://10.0.17.16:80
+http://10.0.17.17:80
+http://10.0.17.7:80
+http://10.0.17.6:80
+http://10.0.17.19:80
+http://10.0.17.20:80
+http://10.0.17.10:80
+http://10.0.17.8:80
+http://10.0.17.9:80
+http://10.0.17.11:80
+http://10.0.17.21:80
+http://10.0.17.24:80
+http://10.0.17.13:80
+http://10.0.17.4:80
+http://10.0.17.26:80
+http://10.0.17.12:80
+http://10.0.17.27:80
+http://10.0.17.25:80
+http://10.0.17.28:80
+http://10.0.17.29:80
+http://10.0.17.34:80
+http://10.0.17.30:80
+http://10.0.17.32:80
+http://10.0.17.23:80
+http://10.0.17.22:80</p>
+
+            </ul>
+        </div>
+        <div>
+            <ul class="Notification">
+                <p class="fix">Notification</p>
+                <p><a href="{% url 'insertCamera' %}">AddCamera</a></p>
+                <p><a href="{% url 'previewCamera' %}">VIEW>>>></a></p>
+                <p><a href="{% url 'iframe' %}">SEPERATE VIEW NEW</a></p>
+
+
+            </ul>
+        </div>
+        <div align="center" class="second" >
+         {%  block content %}
+        {% endblock %}
+        </div>
+    </body>
+</html>
